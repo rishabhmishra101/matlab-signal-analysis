@@ -4,8 +4,12 @@ clear
 clc
 close all
 
-% Load spectral data
-load starData
+% Stellar Spectra Redshift Analysis
+% MATLAB Onramp Final Project
+%
+% NOTE:
+% The dataset (spectra matrix) comes from MATLAB Onramp training environment.
+% It contains spectral intensity values for 7 stars across 357 wavelengths.
 
 % Measurement parameters
 nObs = size(spectra,1);
