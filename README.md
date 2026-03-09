@@ -21,6 +21,17 @@ How it works:
 5. Compute redshift using observed wavelength
 6. Estimate star velocity using speed of light
 
+## Dataset
+
+The dataset `starData` is provided by the MATLAB Onramp training module.
+
+It contains:
+- `spectra` – spectral intensity measurements (357 × 7 matrix)
+- `starnames` – names of the stars
+- wavelength information used to compute hydrogen-alpha absorption.
+
+Since the dataset belongs to the training environment, it is not included in this repository.
+
 ## Stellar Spectrum Plot
 
 The hydrogen-alpha absorption line is detected in the stellar spectrum.  
