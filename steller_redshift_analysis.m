@@ -49,3 +49,7 @@ speed = z * 299792.458;
 fprintf("Observed wavelength: %.4f nm\n",lambdaHa);
 fprintf("Redshift: %.6f\n",z);
 fprintf("Star velocity: %.2f km/s\n",speed);
+
+## Spectrum Plot
+
+![Spectrum](stellar_spectrum_plot.png)
