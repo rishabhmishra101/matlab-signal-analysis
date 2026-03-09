@@ -42,3 +42,10 @@ The red square marks the absorption dip used to calculate the redshift.
 ## Dataset
 
 The dataset `starData` is provided within the MATLAB Onramp training environment and is not included in this repository.
+
+## Compare Stellar Spectra
+
+This script plots the spectra of seven stars and compares their hydrogen-alpha absorption lines.
+Stars moving **away from Earth (redshifted)** are plotted with thicker lines, while **blueshifted stars** are shown with dashed lines.
+
+![Stellar Spectra Comparison](stellar_spectrum_plot.png)
