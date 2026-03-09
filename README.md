@@ -23,6 +23,7 @@ How it works:
 
 ## Stellar Spectrum Plot
 
-The hydrogen-alpha absorption line is detected and used to calculate the redshift of the star.
+The hydrogen-alpha absorption line is detected in the stellar spectrum.  
+The red square marks the absorption dip used to calculate the redshift.
 
 ![Stellar Spectrum](stellar_spectrum_plot.png)
