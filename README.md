@@ -20,3 +20,9 @@ How it works:
 4. Detect the hydrogen-alpha absorption line
 5. Compute redshift using observed wavelength
 6. Estimate star velocity using speed of light
+
+## Stellar Spectrum Plot
+
+The hydrogen-alpha absorption line is detected and used to calculate the redshift of the star.
+
+![Stellar Spectrum](stellar_spectrum_plot.png)
