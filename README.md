@@ -38,3 +38,7 @@ The hydrogen-alpha absorption line is detected in the stellar spectrum.
 The red square marks the absorption dip used to calculate the redshift.
 
 ![Stellar Spectrum](stellar_spectrum_plot.png)
+
+## Dataset
+
+The dataset `starData` is provided within the MATLAB Onramp training environment and is not included in this repository.
