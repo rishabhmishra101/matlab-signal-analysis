@@ -1,51 +1,48 @@
-# MATLAB Stellar Spectra Redshift Analysis
+# MATLAB Stellar Spectra Analysis
 
-This project analyzes stellar spectra to calculate redshift and estimate star velocity.
+A MATLAB learning project that visualizes stellar spectra, identifies a hydrogen-alpha absorption feature, and uses the wavelength shift to estimate redshift and radial velocity.
 
-Dataset:
-The spectra dataset comes from the MATLAB Onramp final project.
-It contains spectral intensity measurements for 7 stars across 357 wavelength samples.
+## Project contents
 
-Main tasks:
-- Plot stellar spectra
-- Detect hydrogen-alpha absorption line
-- Calculate redshift
-- Estimate radial velocity of the star
+- `stellar_redshift_analysis.m` — plots one stellar spectrum, locates its minimum-intensity sample, marks the absorption feature, and calculates redshift and velocity.
+- `compare_stellar_spectra.m` — plots spectra for multiple stars and classifies the calculated shifts as redshifted or blueshifted for visualization.
+- `stellar_spectrum_plot.png` — saved plot output.
+- `compare _stellar_spectra.png` — saved comparison plot (filename contains a space).
 
-How it works:
+## Data dependency
 
-1. Load stellar spectra data
-2. Generate wavelength vector
-3. Plot the spectral intensity
-4. Detect the hydrogen-alpha absorption line
-5. Compute redshift using observed wavelength
-6. Estimate star velocity using speed of light
+The scripts use the `starData` dataset from the MATLAB Onramp training environment. The dataset is not included in this repository.
 
-## Dataset
+The comparison script loads `starData` with `load starData`. The single-spectrum script expects the variable `spectra` to already exist in the MATLAB workspace before it runs. Therefore, the single-spectrum script is not fully standalone in its current form.
 
-The dataset `starData` is provided by the MATLAB Onramp training module.
+The dataset is expected to provide the spectra matrix and wavelength information used by the scripts, along with star names for the comparison.
 
-It contains:
-- `spectra` – spectral intensity measurements (357 × 7 matrix)
-- `starnames` – names of the stars
-- wavelength information used to compute hydrogen-alpha absorption.
+## Method
 
-Since the dataset belongs to the training environment, it is not included in this repository.
+1. Create or use the wavelength vector.
+2. Select a stellar spectrum.
+3. Locate the minimum intensity sample as an estimate of the absorption line.
+4. Compare the observed wavelength with the hydrogen-alpha reference wavelength (656.28 nm).
+5. Calculate redshift: `z = (observed wavelength / reference wavelength) - 1`.
+6. Estimate radial velocity using the project's simple relation: `v = z × 299792.458 km/s`.
 
-## Stellar Spectrum Plot
+This is a learning implementation and uses a simplified velocity estimate. It is not a complete astronomical analysis pipeline.
 
-The hydrogen-alpha absorption line is detected in the stellar spectrum.  
-The red square marks the absorption dip used to calculate the redshift.
+## Running
 
-![Stellar Spectrum](stellar_spectrum_plot.png)
+Run the scripts in MATLAB with the required `starData` dataset available. The dataset may be available in the MATLAB Onramp environment; it is not distributed here.
 
-## Dataset
+## Limitations
 
-The dataset `starData` is provided within the MATLAB Onramp training environment and is not included in this repository.
+- Dataset availability is external to this repository.
+- The minimum-intensity sample is used as a simple absorption-line detector.
+- The velocity calculation is a simplified approximation.
+- Results have not been independently validated against a scientific reference dataset.
 
-## Compare Stellar Spectra
+## Learning objectives
 
-This script plots the spectra of seven stars and compares their hydrogen-alpha absorption lines.
-Stars moving **away from Earth (redshifted)** are plotted with thicker lines, while **blueshifted stars** are shown with dashed lines.
-
-![Stellar Spectra Comparison](stellar_spectrum_plot.png)
+- Matrix indexing and vector construction
+- Plotting and labeling data
+- Finding extrema
+- Basic wavelength-shift calculations
+- Working with training datasets and documenting dependencies
